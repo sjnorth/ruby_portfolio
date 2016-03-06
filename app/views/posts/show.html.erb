@@ -6,7 +6,7 @@
     </header>
 
     <div id="content">
-     <%= @post.content %>
+     <%= markdown @post.content %>
     </div>
 
       <hr>
@@ -22,7 +22,9 @@
       <!-- Google Plus -->
         <a onclick="javascript:window.open('http://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top-200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
     </div>
-<!-- could not get the above sharebox to work. checked code for bugs and found nothing. checked if javascript was present in the head and it was. will keep thinking. -->
+
     <hr> 
+
+    <%= link_to "Edit", edit_post_path(@post) %>
 
 
