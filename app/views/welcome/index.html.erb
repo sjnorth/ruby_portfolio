@@ -1,0 +1,32 @@
+<div class="wrapper wrapper_padding clearfix">
+    <div class="col-1 about homepage_content">
+      <h2>About</h2>
+      <hr>
+      <p>I'm a journalist turned developer currently based in London.</p>
+      <p>I write about women in tech around the world while building new web apps in Ruby and JavaScript.</p>
+      <p>You can find me on Twitter, Github and my personal blog, <a href="#">Placesbrands</a>.</p>
+  </div>
+
+    <div class="col-2 homepage_content">
+      <h2>Journalism</h2>
+      <hr>
+
+      <% @posts.each do |post| %>
+        <h3><a href="#"><%= link_to post.title, post %></a></h3>
+        <p class="date"><%= post.created_at.strftime("%A, %b, %d") %></p>
+      <% end %>
+  </div>
+
+    <div class="col-3 homepage_content">
+      <h2>Web Development</h2>
+      <hr>
+      <h3><a href="#">Writing on cities</h3>
+      <p class="date">Thursday March 3rd</p>
+      <h3><a href="#">The ins and outs of nation brands</h3>
+      <p class="date">Wednesday March 2nd</p>
+      <h3><a href="#">Getting to grips with tourism marketing</h3>
+      <p class="date">Tuesday March 1st</p>
+  </div>
+</div>
+
+

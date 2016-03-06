@@ -12,16 +12,27 @@
 </head>
 <body>
   <header id="main_navigation" class="clearfix">
-    <a href="#" class="name">Samantha North</a>
+    <%= link_to "Samantha North", root_path, class: "name" %>
+    <!-- <a href="#" class="name">Samantha North</a> -->
     <nav>
     <%= link_to "Articles", posts_path %>
-    <!-- <a href="articles.html">Articles</a> first problem, this throws an error-->    
+    <!-- <a href="articles.html">Articles</a> first problem, the above throws an error-->    
     <a href="#">Projects</a>
     <a href="#">Contact</a>
     </nav>
   </header>
 
 <%= yield %>
+
+<footer id="main_footer">
+  <p class="copyright">&copy; 2016 Samantha North</p>
+
+<nav>
+  <a href="http://twitter.com/placesbrands" target="_blank"><i class="fa fa-twitter-square"></i></a>
+  <a href="http://github.com/sjnorth" target="_blank"><i class="fa fa-github-square"></i></a>
+  <a href="http://facebook.com/placesbrands" target="_blank"><i class="fa fa-facebook-square"></i></a>
+</nav>
+</footer>
 
 </body>
 </html>
